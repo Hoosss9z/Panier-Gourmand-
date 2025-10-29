@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { ShoppingCart, Menu, X, Package } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
+import paniergImg from "../assets/PanierG.jpg";
 
 export default function Navbar({ onOpenCart }) {
   const { count } = useCart();
@@ -22,7 +23,7 @@ export default function Navbar({ onOpenCart }) {
         <Link to="/" className="flex items-center justify-center">
           <div className="relative">
             <img
-              src="Public/PanierG.JPG"              // <— image dans /public
+              src={paniergImg}
               alt="Panier Gourmand"
               className="h-12 w-12 md:h-16 md:w-16 object-cover rounded-full shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
             />
@@ -35,10 +36,18 @@ export default function Navbar({ onOpenCart }) {
 
         {/* Liens desktop */}
         <nav className="hidden md:flex items-center gap-10 text-base font-medium">
-          <NavLink to="/" className={desktopLink}>Accueil</NavLink>
-          <NavLink to="/produits" className={desktopLink}>Produits</NavLink>
-          <NavLink to="/contact" className={desktopLink}>Contact</NavLink>
-          <NavLink to="/checkout" className={desktopLink}>Commander</NavLink>
+          <NavLink to="/" className={desktopLink}>
+            Accueil
+          </NavLink>
+          <NavLink to="/produits" className={desktopLink}>
+            Produits
+          </NavLink>
+          <NavLink to="/contact" className={desktopLink}>
+            Contact
+          </NavLink>
+          <NavLink to="/checkout" className={desktopLink}>
+            Commander
+          </NavLink>
         </nav>
 
         {/* Actions droite */}
