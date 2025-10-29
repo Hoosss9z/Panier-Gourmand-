@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { ShoppingCart, Menu, X, Package } from "lucide-react";
 import { useCart } from "../context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
-import paniergImg from "../assets/PanierG.jpg";
+import paniergImg from "../assets/panierg.jpg";
 
 export default function Navbar({ onOpenCart }) {
   const { count } = useCart();
